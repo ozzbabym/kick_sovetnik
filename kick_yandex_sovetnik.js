@@ -14,6 +14,8 @@ function kickSovetnik () {
             styles[item].remove();
         }
     });
+
+    document.querySelector('html').style.marginTop = '0';
 };
 
 observer = new MutationObserver( kickSovetnik );
