@@ -1,6 +1,6 @@
 function kickSovetnik () {
-    var elems = $('body div[id]');
-    var styles = $('style');
+    var elems = document.querySelectorAll('body div[id]');
+    var styles = document.querySelectorAll('style');
 
 
     Object.keys(elems).forEach(function(item) {
@@ -14,8 +14,6 @@ function kickSovetnik () {
             styles[item].remove();
         }
     });
-
-    $('html').css({margintTop: 0});
 };
 
 observer = new MutationObserver( kickSovetnik );
